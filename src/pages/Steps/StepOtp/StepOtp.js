@@ -13,7 +13,7 @@ const StepOtp = () => {
   const dispatch = useDispatch();
   const { phone, hash } = useSelector((state) => state.auth.otp);
   async function submit() {
-    if(!otp || !phone || !hash) return;
+    // if(!otp || !phone || !hash) return;
     try {
       console.log("phone and hash is" , phone , hash, otp)
       const { data } = await verifyOtp({ otp, phone, hash });
